@@ -1,0 +1,22 @@
+h1{
+    font-size: 350%;
+    color: white;
+    text-align: center;
+}
+
+
+footer .col, footer p  {
+    color: white;
+    text-align: center;
+}
+
+.description {
+    color: white;
+    font-size: 160%;
+}
+
+.descriptionLeft{
+    color: white;
+    text-align: right;
+    font-size: 160%;
+}
