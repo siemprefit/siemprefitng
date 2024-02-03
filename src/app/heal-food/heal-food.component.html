@@ -1,1 +1,112 @@
-<p>heal-food works!</p>
+<div class="grid">
+    <div class="col btnDownload">
+        <p-button [link]="true">
+            <a href="../../assets/files/Plan_nutricional.xlsx" download="Plan nutricional.xlsx">
+                <span class="pi pi-download"></span>
+                <span>&nbsp;Plan nutricional</span>
+            </a>
+        </p-button>
+    </div>
+</div>
+
+<p-tabView>
+    <p-tabPanel header="Desayunos">
+        <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft" class="flex box justify-content-center 
+            align-items-center border-round animation-duration-2000 animation-ease-in-out">
+            <div class="grid">
+                <div class="col descriptionLeft">
+                    <h1>Huevos revueltos con espinacas y champiñones</h1>
+                    <p>1- Saltea 1 taza de espinacas y 1/2 taza de champiñones en una sartén con aceite de oliva.</p>
+                    <p>2- Agrega 2 huevos batidos y revuelve hasta que estén cocidos.</p>
+                    <p>3- Sirve con una rebanada de pan integral tostado.</p>
+                </div>
+                <div class="col">
+                    <p-image src="assets/images/desayuno1.jpg" alt="Image" width="100%">
+                    </p-image>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+        <div pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright" class="flex box justify-content-center 
+            align-items-center border-round animation-duration-2000 animation-ease-in-out">
+            <div class="grid">
+                <div class="col">
+                    <p-image src="assets/images/desayuno2.jpg" alt="Image" width="100%">
+                    </p-image>
+                </div>
+                <div class="col descriptionLeft">
+                    <h1>Yogur griego con frutas y granola</h1>
+                    <p>1- Agrega 1 taza de yogur griego.</p>
+                    <p>2- 1/2 taza de frutas frescas picadas.</p>
+                    <p>3- 1/4 taza de granola en un tazón.</p>
+                    <p>4- mezclar y disfrutar.</p>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+        <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft" class="flex box justify-content-center 
+            align-items-center border-round animation-duration-2000 animation-ease-in-out">
+            <div class="grid">
+                <div class="col descriptionLeft">
+                    <h1>Tostadas de aguacate y huevo</h1>
+                    <p>1- Tuesta 2 rebanadas de pan integral.</p>
+                    <p>2- Corta 1/2 aguacate en rodajas y cocina 1 huevo a tu gusto.</p>
+                    <p>3- Coloca las rodajas de aguacate en las tostadas y agrega el huevo encima.</p>
+                    <p>4- Sazona con sal y pimienta al gusto.</p>
+                </div>
+                <div class="col">
+                    <p-image src="assets/images/desayuno3.jpg" alt="Image" width="100%">
+                    </p-image>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+        <div pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright" class="flex box justify-content-center 
+            align-items-center border-round animation-duration-2000 animation-ease-in-out">
+            <div class="grid">
+                <div class="col">
+                    <p-image src="assets/images/desayuno4.jpg" alt="Image" width="100%">
+                    </p-image>
+                </div>
+                <div class="col descriptionLeft">
+                    <h1>Batido de frutas y verduras</h1>
+                    <p>1- Licúa 1/2 taza de espinacas.</p>
+                    <p>2- 1/2 taza de fresas.</p>
+                    <p>3- 1/2 plátano.</p>
+                    <p>4- 1/2 taza de leche de almendras .</p>
+                    <p>5- 1 cucharada de miel hasta que quede suave.</p>
+                    <p>+- Sirve en un vaso y disfruta.</p>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+        <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft" class="flex box justify-content-center 
+            align-items-center border-round animation-duration-2000 animation-ease-in-out">
+            <div class="grid">
+                <div class="col descriptionLeft">
+                    <h1>Tortilla de espinacas y queso</h1>
+                    <p>1- Saltea 1 taza de espinacas en una sartén con aceite de oliva.</p>
+                    <p>2- Agrega 2 huevos batidos y 1/4 taza de queso rallado.</p>
+                    <p>3- Revuelve hasta que estén cocidos.</p>
+                    <p>4- Sirve con una rebanada de pan integral tostado.</p>
+                </div>
+                <div class="col">
+                    <p-image src="assets/images/desayuno5.jpg" alt="Image" width="100%">
+                    </p-image>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+    </p-tabPanel>
+    <p-tabPanel header="Almuerzos">
+        <ng-template pTemplate="content">
+
+        </ng-template>
+    </p-tabPanel>
+    <p-tabPanel header="Cenas">
+        <ng-template pTemplate="content">
+
+        </ng-template>
+    </p-tabPanel>
+</p-tabView>
+
