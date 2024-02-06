@@ -5,26 +5,57 @@
         <a href="">Inicio</a>
       </strong>
     </p-button>
-    <p-button [link]="true">
-      <strong>
-        <a href="home-training">Entrena en casa</a>
-      </strong>
-    </p-button>
-    <p-button [link]="true">
-      <strong>
-        <a href="heal-food">Alimentacion saludable</a>
-      </strong>
-    </p-button>
-    <p-button [link]="true">
-      <strong>
-        <a href="">Administrativo</a>
-      </strong>
-    </p-button>
-    <p-button id="loginbtn" [link]="true">
-      <strong>
-        <a href="">Login</a>
-      </strong>
-    </p-button>
+    @if(loged){
+      <p-button [link]="true">
+        <strong>
+          <a href="home-training">Entrena en casa</a>
+        </strong>
+      </p-button>
+      <p-button [link]="true">
+        <strong>
+          <a href="heal-food">Alimentacion saludable</a>
+        </strong>
+      </p-button>
+      @if(admin){
+        <p-button [link]="true">
+          <strong>
+            <a href="">Administrativo</a>
+          </strong>
+        </p-button>
+      }
+    }
+    @if(loged){
+      <p-button id="loginbtn" [link]="true" (click)="logout()">
+        <strong>
+          <a>Logout</a>
+        </strong>
+      </p-button>
+    } @else {
+      <p-button id="loginbtn" [link]="true" (click)="showLogin()">
+        <strong>
+          <a>Login</a>
+        </strong>
+      </p-button>
+    }    
   </div>
 </div>
+
+<p-dialog [(visible)]="visible">
+  <ng-template pTemplate="headless">
+      <div class="flex flex-column px-8 py-5 gap-4" style="border-radius: 12px; background-color: black;">
+          <div class="inline-flex flex-column gap-2">
+              <label for="cedula" class="text-primary-50 font-semibold">Cedula</label>
+              <input [(ngModel)]="cedula" pInputText id="cedula" class="bg-white-alpha-20 border-none p-3 text-primary-50"/>
+          </div>
+          <div class="inline-flex flex-column gap-2">
+              <label for="token" class="text-primary-50 font-semibold">Token</label>
+              <input [(ngModel)]="token" pInputText id="token" class="bg-white-alpha-20 border-none p-3 text-primary-50" type="password"/>
+          </div>
+          <div class="flex align-items-center gap-2">
+              <p-button label="Login" (click)="login()" [text]="true" styleClass="w-full text-primary-50 border-1 border-white-alpha-30 hover:bg-white-alpha-10" class="w-full" ></p-button>
+              <p-button label="Cancelar" (click)="closeLogin()" [text]="true"  styleClass="w-full text-primary-50 border-1 border-white-alpha-30 hover:bg-white-alpha-10" class="w-full"></p-button>
+          </div>
+      </div>
+  </ng-template>
+</p-dialog>
 <router-outlet />
