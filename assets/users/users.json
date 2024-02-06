@@ -1,0 +1,12 @@
+[
+    {
+        "cedula": "1020123456",
+        "token": "js123*",
+        "rol": "Admin"
+    },
+    {
+        "cedula": "1020789456",
+        "token": "mr123*",
+        "rol": "client"
+    }
+]
